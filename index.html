@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mugisha Dear Duvet — Full‑Stack Web &amp; Mobile Developer | Database Specialist</title>
+<meta name="description" content="Mugisha Dear Duvet (Dellyboo) is a Full-Stack Web Developer, Database Specialist and Mobile App Developer based in Japan. Available for freelance web, mobile and database projects.">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- Bootstrap Icons -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+<link rel="stylesheet" href="css/style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 fill=%22%230B1D33%22/><text x=%2250%22 y=%2265%22 font-size=%2255%22 fill=%22%236FD3E8%22 text-anchor=%22middle%22 font-family=%22monospace%22>D</text></svg>">
+</head>
+<body>
+
+<!-- ================= NAV ================= -->
+<header class="navbar" id="navbar">
+  <div class="navbar__inner">
+    <a href="#home" class="brand">
+      <span class="brand__mark">DD</span>
+      <span class="brand__text">dellyboo<span class="brand__dot">.</span>dev</span>
+    </a>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="#home" class="nav-link active" data-nav>Home</a>
+      <a href="#about" class="nav-link" data-nav>About</a>
+      <a href="#skills" class="nav-link" data-nav>Skills</a>
+      <a href="#services" class="nav-link" data-nav>Services</a>
+      <a href="#projects" class="nav-link" data-nav>Projects</a>
+      <a href="#contact" class="nav-link" data-nav>Contact</a>
+    </nav>
+
+    <a href="#contact" class="btn btn--sm btn--primary nav-cta">
+      <i class="bi bi-terminal"></i> Hire me
+    </a>
+
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="hero" id="home">
+  <div class="hero__grid" aria-hidden="true"></div>
+  <div class="hero__scanline" aria-hidden="true"></div>
+
+  <div class="hero__inner">
+    <div class="hero__copy">
+      <p class="eyebrow"><span class="eyebrow__dot"></span> Available for freelance work · Based in Japan</p>
+
+      <h1 class="hero__title">
+        <span class="hero__title-line">Full‑Stack Web</span>
+        <span class="hero__title-line">&amp; Mobile App</span>
+        <span class="hero__title-line hero__title-accent">Developer<span class="caret" aria-hidden="true">_</span></span>
+      </h1>
+
+      <p class="hero__desc">
+        I design, build and ship responsive websites, mobile apps and the databases
+        that power them — from a Next.js front end down to a MySQL schema, deployed
+        clean and fast.
+      </p>
+
+      <div class="hero__stack-chips" aria-label="Core technologies">
+        <span class="chip"><i class="bi bi-filetype-html"></i> HTML/CSS</span>
+        <span class="chip"><i class="bi bi-filetype-js"></i> JavaScript</span>
+        <span class="chip"><i class="bi bi-triangle"></i> Next.js</span>
+        <span class="chip"><i class="bi bi-filetype-php"></i> PHP</span>
+        <span class="chip"><i class="bi bi-database"></i> MySQL / MongoDB</span>
+        <span class="chip"><i class="bi bi-fire"></i> Firebase</span>
+        <span class="chip"><i class="bi bi-phone"></i> Flutter</span>
+      </div>
+
+      <div class="hero__actions">
+        <a href="#projects" class="btn btn--primary">
+          <i class="bi bi-collection"></i> View my work
+        </a>
+        <a href="#contact" class="btn btn--ghost">
+          <i class="bi bi-envelope"></i> Start a project
+        </a>
+      </div>
+    </div>
+
+    <!-- Signature element: animated system architecture diagram -->
+    <div class="hero__diagram" aria-hidden="true">
+      <svg viewBox="0 0 460 460" class="arch-svg" role="img" aria-label="Diagram showing frontend, backend, database and mobile app connected together">
+        <!-- frame -->
+        <rect x="6" y="6" width="448" height="448" rx="6" class="arch-frame"/>
+        <text x="24" y="30" class="arch-label arch-label--title">SYSTEM.ARCHITECTURE</text>
+        <text x="24" y="438" class="arch-label">FIG. 01 — STACK OVERVIEW</text>
+
+        <!-- connecting lines (data flow) -->
+        <path id="lineFB" class="arch-line" d="M 230 120 L 230 190"/>
+        <path id="lineBD1" class="arch-line" d="M 200 235 L 120 290"/>
+        <path id="lineBD2" class="arch-line" d="M 260 235 L 340 290"/>
+        <path id="lineBM" class="arch-line" d="M 230 235 L 230 330"/>
+        <path id="lineDM" class="arch-line" d="M 340 320 L 260 360"/>
+
+        <!-- traveling packets -->
+        <circle r="3.4" class="arch-pulse" style="offset-path:path('M 230 120 L 230 190')"></circle>
+        <circle r="3.4" class="arch-pulse arch-pulse--d2" style="offset-path:path('M 200 235 L 120 290')"></circle>
+        <circle r="3.4" class="arch-pulse arch-pulse--d3" style="offset-path:path('M 260 235 L 340 290')"></circle>
+        <circle r="3.4" class="arch-pulse arch-pulse--d4" style="offset-path:path('M 230 235 L 230 330')"></circle>
+
+        <!-- Frontend node -->
+        <g class="arch-node" transform="translate(230,90)">
+          <rect x="-70" y="-26" width="140" height="52" rx="4" class="arch-box"/>
+          <text class="arch-node-text" y="-4">FRONTEND</text>
+          <text class="arch-node-sub" y="14">Next.js · JS</text>
+        </g>
+
+        <!-- Backend node -->
+        <g class="arch-node" transform="translate(230,212)">
+          <rect x="-64" y="-24" width="128" height="48" rx="4" class="arch-box arch-box--accent"/>
+          <text class="arch-node-text" y="-2">BACKEND</text>
+          <text class="arch-node-sub" y="16">PHP · API</text>
+        </g>
+
+        <!-- DB node -->
+        <g class="arch-node" transform="translate(112,312)">
+          <rect x="-58" y="-24" width="116" height="48" rx="4" class="arch-box"/>
+          <text class="arch-node-text" y="-2">DATABASE</text>
+          <text class="arch-node-sub" y="16">MySQL/Mongo</text>
+        </g>
+
+        <!-- Firebase node -->
+        <g class="arch-node" transform="translate(348,312)">
+          <rect x="-52" y="-24" width="104" height="48" rx="4" class="arch-box"/>
+          <text class="arch-node-text" y="-2">FIREBASE</text>
+          <text class="arch-node-sub" y="16">Auth · RT‑DB</text>
+        </g>
+
+        <!-- Mobile node -->
+        <g class="arch-node" transform="translate(230,368)">
+          <rect x="-56" y="-24" width="112" height="48" rx="4" class="arch-box"/>
+          <text class="arch-node-text" y="-2">MOBILE</text>
+          <text class="arch-node-sub" y="16">Flutter</text>
+        </g>
+      </svg>
+    </div>
+  </div>
+
+  <a href="#about" class="scroll-cue" aria-label="Scroll to About section">
+    <span>scroll</span>
+    <i class="bi bi-arrow-down"></i>
+  </a>
+</section>
+
+<!-- ================= ABOUT ================= -->
+<section class="section" id="about">
+  <div class="section__inner about">
+    <div class="about__frame">
+      <div class="frame-corner frame-corner--tl"></div>
+      <div class="frame-corner frame-corner--tr"></div>
+      <div class="frame-corner frame-corner--bl"></div>
+      <div class="frame-corner frame-corner--br"></div>
+      <img src="assets/avatar.jpg" alt="Portrait of Mugisha Dear Duvet" class="avatar-photo">
+      <p class="about__frame-caption">PHOTO — 01/01</p>
+    </div>
+
+    <div class="about__copy">
+      <p class="section__eyebrow">// about</p>
+      <h2 class="section__title">Building the whole stack, not just the visible half.</h2>
+      <p class="about__text">
+        I'm Mugisha Dear Duvet — most people know me as <strong>Dellyboo</strong> — a
+        full-stack web developer and database specialist working with clients remotely
+        from Japan. I like projects where the front end, the API and
+        the schema underneath all have to work together cleanly — that's usually where
+        the real engineering happens. Alongside web work, I build cross-platform mobile
+        apps with Flutter and Firebase, and take on smaller jobs like web automation,
+        debugging, logo design and AI-assisted content editing.
+      </p>
+      <p class="about__text">
+        My approach is simple: understand the problem before writing code, keep the
+        codebase easy to hand off, and communicate clearly at every step so there are
+        no surprises at delivery.
+      </p>
+
+      <div class="spec-sheet">
+        <div class="spec-row">
+          <span class="spec-key"><i class="bi bi-geo-alt"></i> Location</span>
+          <span class="spec-val">Japan (Remote · GMT+9)</span>
+        </div>
+        <div class="spec-row">
+          <span class="spec-key"><i class="bi bi-bullseye"></i> Focus</span>
+          <span class="spec-val">Web apps · Mobile apps · Databases</span>
+        </div>
+        <div class="spec-row">
+          <span class="spec-key"><i class="bi bi-stack"></i> Stack</span>
+          <span class="spec-val">Next.js · PHP · MySQL · MongoDB · Firebase · Flutter</span>
+        </div>
+        <div class="spec-row">
+          <span class="spec-key"><i class="bi bi-lightning-charge"></i> Availability</span>
+          <span class="spec-val status-open"><span class="status-dot"></span> Open for freelance projects</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SKILLS ================= -->
+<section class="section section--alt" id="skills">
+  <div class="section__inner">
+    <p class="section__eyebrow center">// skills</p>
+    <h2 class="section__title center">Toolkit</h2>
+    <p class="section__lede center">Grouped by where each tool lives in the stack.</p>
+
+    <div class="panels">
+      <div class="panel" data-reveal>
+        <div class="panel__head">
+          <i class="bi bi-window-stack panel__icon"></i>
+          <h3>Front‑End</h3>
+        </div>
+        <ul class="panel__list">
+          <li><i class="bi bi-filetype-html"></i> HTML5</li>
+          <li><i class="bi bi-filetype-css"></i> CSS3</li>
+          <li><i class="bi bi-filetype-js"></i> JavaScript</li>
+          <li><i class="bi bi-triangle"></i> Next.js</li>
+        </ul>
+      </div>
+
+      <div class="panel" data-reveal>
+        <div class="panel__head">
+          <i class="bi bi-hdd-network panel__icon"></i>
+          <h3>Back‑End</h3>
+        </div>
+        <ul class="panel__list">
+          <li><i class="bi bi-filetype-php"></i> PHP</li>
+          <li><i class="bi bi-fire"></i> Firebase (backend services)</li>
+          <li><i class="bi bi-plug"></i> REST APIs</li>
+          <li><i class="bi bi-robot"></i> Web automation</li>
+        </ul>
+      </div>
+
+      <div class="panel" data-reveal>
+        <div class="panel__head">
+          <i class="bi bi-database panel__icon"></i>
+          <h3>Database</h3>
+        </div>
+        <ul class="panel__list">
+          <li><i class="bi bi-database-fill"></i> MySQL</li>
+          <li><i class="bi bi-diagram-3"></i> MongoDB</li>
+          <li><i class="bi bi-diagram-2"></i> Schema design</li>
+          <li><i class="bi bi-speedometer2"></i> Query optimization</li>
+        </ul>
+      </div>
+
+      <div class="panel" data-reveal>
+        <div class="panel__head">
+          <i class="bi bi-phone panel__icon"></i>
+          <h3>Mobile</h3>
+        </div>
+        <ul class="panel__list">
+          <li><i class="bi bi-google"></i> Flutter</li>
+          <li><i class="bi bi-fire"></i> Firebase Auth / RTDB</li>
+          <li><i class="bi bi-apple"></i> Cross‑platform builds</li>
+          <li><i class="bi bi-bug"></i> Debugging</li>
+        </ul>
+      </div>
+
+      <div class="panel" data-reveal>
+        <div class="panel__head">
+          <i class="bi bi-brush panel__icon"></i>
+          <h3>Design &amp; Content</h3>
+        </div>
+        <ul class="panel__list">
+          <li><i class="bi bi-vector-pen"></i> Logo design</li>
+          <li><i class="bi bi-magic"></i> AI content editing</li>
+          <li><i class="bi bi-layout-text-window"></i> UI polish</li>
+          <li><i class="bi bi-file-earmark-code"></i> Clean handoff code</li>
+        </ul>
+      </div>
+
+      <div class="panel" data-reveal>
+        <div class="panel__head">
+          <i class="bi bi-tools panel__icon"></i>
+          <h3>Workflow</h3>
+        </div>
+        <ul class="panel__list">
+          <li><i class="bi bi-git"></i> Git &amp; GitHub</li>
+          <li><i class="bi bi-bug-fill"></i> Software debugging</li>
+          <li><i class="bi bi-chat-dots"></i> Clear communication</li>
+          <li><i class="bi bi-rocket-takeoff"></i> Fast delivery</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SERVICES ================= -->
+<section class="section" id="services">
+  <div class="section__inner">
+    <p class="section__eyebrow center">// services</p>
+    <h2 class="section__title center">What I can build for you</h2>
+
+    <div class="services-grid">
+      <div class="service-card" data-reveal>
+        <i class="bi bi-code-slash service-card__icon"></i>
+        <h3>Web Development</h3>
+        <p>Responsive websites and web apps with HTML, CSS, JavaScript and Next.js — fast, accessible and easy to maintain.</p>
+      </div>
+      <div class="service-card" data-reveal>
+        <i class="bi bi-phone-vibrate service-card__icon"></i>
+        <h3>Mobile Apps</h3>
+        <p>Cross-platform mobile apps built with Flutter, backed by Firebase for auth, storage and real-time data.</p>
+      </div>
+      <div class="service-card" data-reveal>
+        <i class="bi bi-database-gear service-card__icon"></i>
+        <h3>Database Design</h3>
+        <p>Clean, normalized MySQL and MongoDB schemas that stay fast and predictable as your data grows.</p>
+      </div>
+      <div class="service-card" data-reveal>
+        <i class="bi bi-robot service-card__icon"></i>
+        <h3>Web Automation</h3>
+        <p>Scripts and tools that automate repetitive browser and data-entry tasks so your team doesn't have to.</p>
+      </div>
+      <div class="service-card" data-reveal>
+        <i class="bi bi-bug service-card__icon"></i>
+        <h3>Debugging &amp; Fixes</h3>
+        <p>Tracking down and fixing bugs in existing codebases — front end, back end or database layer.</p>
+      </div>
+      <div class="service-card" data-reveal>
+        <i class="bi bi-palette service-card__icon"></i>
+        <h3>Logo &amp; AI Content Editing</h3>
+        <p>Simple, memorable logo design plus AI-assisted editing and polishing for written content.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= WHY WORK WITH ME ================= -->
+<section class="strip">
+  <div class="section__inner strip__inner">
+    <div class="strip__item" data-reveal>
+      <i class="bi bi-rocket-takeoff"></i>
+      <h4>Fast delivery</h4>
+      <p>Focused scope and steady progress updates — no radio silence.</p>
+    </div>
+    <div class="strip__item" data-reveal>
+      <i class="bi bi-chat-square-text"></i>
+      <h4>Reliable communication</h4>
+      <p>Clear updates in a timezone-friendly cadence, from kickoff to handover.</p>
+    </div>
+    <div class="strip__item" data-reveal>
+      <i class="bi bi-braces-asterisk"></i>
+      <h4>Clean code</h4>
+      <p>Organized, documented code that the next developer can actually read.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PROJECTS ================= -->
+<!--
+  Pulled from your real repos at github.com/Dellyboo. Add "Live demo" links
+  here once any of these are deployed (e.g. via GitHub Pages) — see README.
+  Want more projects listed? Push them to GitHub and send me the repo name.
+-->
+<section class="section section--alt" id="projects">
+  <div class="section__inner">
+    <p class="section__eyebrow center">// projects</p>
+    <h2 class="section__title center">Selected work</h2>
+    <p class="section__lede center">A few builds pulled straight from my GitHub.</p>
+
+    <div class="projects-grid">
+      <article class="project-card" data-reveal>
+        <div class="project-card__top">
+          <i class="bi bi-cup-straw"></i>
+          <span class="project-card__tag-primary">Web · Full‑Stack</span>
+        </div>
+        <h3>Bar &amp; Restaurant Management System</h3>
+        <p>"Ku Kayaga" — a dashboard for running a bar and restaurant: real-time bill tracking, kitchen orders, stock and staff management, with a responsive layout for desktop and mobile.</p>
+        <div class="project-card__tags">
+          <span class="tag">PHP</span><span class="tag">MySQL</span><span class="tag">JavaScript</span>
+        </div>
+        <div class="project-card__links">
+          <a href="https://github.com/Dellyboo/Bar-Resto-Management-System" target="_blank" rel="noopener" class="link-btn"><i class="bi bi-github"></i> View source</a>
+        </div>
+      </article>
+
+      <article class="project-card" data-reveal>
+        <div class="project-card__top">
+          <i class="bi bi-clipboard-check"></i>
+          <span class="project-card__tag-primary">Web · Database</span>
+        </div>
+        <h3>Materials Request Management System</h3>
+        <p>Streamlines requesting, approving and tracking consumable materials inside an organization — real-time status tracking, a role-based approval workflow, notifications and usage reports.</p>
+        <div class="project-card__tags">
+          <span class="tag">PHP</span><span class="tag">MySQL</span>
+        </div>
+        <div class="project-card__links">
+          <a href="https://github.com/Dellyboo/Request-management-system" target="_blank" rel="noopener" class="link-btn"><i class="bi bi-github"></i> View source</a>
+        </div>
+      </article>
+
+      <article class="project-card" data-reveal>
+        <div class="project-card__top">
+          <i class="bi bi-geo-alt"></i>
+          <span class="project-card__tag-primary">Web</span>
+        </div>
+        <h3>Live in Kobe</h3>
+        <p>A local guide site for living in Kobe, Japan — built as a clean, single-page HTML site.</p>
+        <div class="project-card__tags">
+          <span class="tag">HTML</span><span class="tag">CSS</span>
+        </div>
+        <div class="project-card__links">
+          <a href="https://github.com/Dellyboo/live-in-kobe" target="_blank" rel="noopener" class="link-btn"><i class="bi bi-github"></i> View source</a>
+        </div>
+      </article>
+
+      <!-- REPLACE ME: swap this for your next project, or delete the card -->
+      <article class="project-card" data-reveal>
+        <div class="project-card__top">
+          <i class="bi bi-plus-lg"></i>
+          <span class="project-card__tag-primary">Your next build</span>
+        </div>
+        <h3>More work coming soon</h3>
+        <p>Currently taking on new freelance projects — mobile apps, databases and full-stack web builds welcome.</p>
+        <div class="project-card__tags">
+          <span class="tag">Flutter</span><span class="tag">Firebase</span><span class="tag">Next.js</span>
+        </div>
+        <div class="project-card__links">
+          <a href="#contact" class="link-btn"><i class="bi bi-envelope"></i> Start a project</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section class="section" id="contact">
+  <div class="section__inner contact">
+    <div class="contact__copy">
+      <p class="section__eyebrow">// contact</p>
+      <h2 class="section__title">Let's build something.</h2>
+      <p class="about__text">
+        Have a project in mind — a website, a mobile app, or a database that needs
+        cleaning up? Send a few details below, or email me directly. I typically
+        reply within a day.
+      </p>
+
+      <div class="contact__direct">
+        <a href="mailto:dellydear98@gmail.com" class="contact-line">
+          <i class="bi bi-envelope-at"></i> dellydear98@gmail.com
+        </a>
+        <span class="contact-line contact-line--muted">
+          <i class="bi bi-geo-alt"></i> Japan · Remote (GMT+9)
+        </span>
+      </div>
+
+      <!-- REPLACE ME: add your LinkedIn (or other) profile link -->
+      <div class="socials">
+        <a href="https://github.com/Dellyboo" target="_blank" rel="noopener" class="social-icon" aria-label="GitHub"><i class="bi bi-github"></i></a>
+        <a href="#" class="social-icon" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+        <a href="mailto:dellydear98@gmail.com" class="social-icon" aria-label="Email"><i class="bi bi-envelope"></i></a>
+      </div>
+    </div>
+
+    <!--
+      NOTE: GitHub Pages only hosts static files, so this form has no server to
+      send to yet. It's wired to open the visitor's email client via mailto so it
+      works out of the box. For a "sends without opening email" experience, see
+      the README for the free Formspree option.
+    -->
+    <form class="contact-form" id="contactForm">
+      <div class="form-row">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required placeholder="Your name">
+      </div>
+      <div class="form-row">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required placeholder="you@example.com">
+      </div>
+      <div class="form-row">
+        <label for="message">Project details</label>
+        <textarea id="message" name="message" rows="5" required placeholder="Tell me a bit about what you need..."></textarea>
+      </div>
+      <button type="submit" class="btn btn--primary btn--full">
+        <i class="bi bi-send"></i> Send message
+      </button>
+      <p class="form-note" id="formNote"></p>
+    </form>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+  <div class="section__inner footer__inner">
+    <span>© <span id="year"></span> Mugisha Dear Duvet (Dellyboo) — Full‑Stack &amp; Mobile Developer</span>
+    <a href="#home" class="back-to-top"><i class="bi bi-arrow-up-circle"></i> Back to top</a>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
