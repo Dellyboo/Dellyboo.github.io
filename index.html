@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mugisha Dear Duvet - Full‑Stack Web &amp; Mobile Developer</title>
+  <meta name="description"
+    content="Mugisha Dear Duvet (Dellyboo) - Full-Stack Web Developer, Database Specialist and Mobile App Developer based in Japan. Available for freelance projects.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flag-icons@7.2.3/css/flag-icons.min.css">
+
+  <link rel="stylesheet" href="css/style.css">
+  <!-- EmailJS: free, no-backend email delivery for the contact form (see js/emailjs-config.js) -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%23120C24%22/><text x=%2250%22 y=%2266%22 font-size=%2250%22 fill=%22%2322D3EE%22 text-anchor=%22middle%22 font-family=%22monospace%22>&lt;/&gt;</text></svg>">
+</head>
+
+<body>
+
+  <!-- ================= NAV ================= -->
+  <header class="navbar" id="navbar">
+    <div class="navbar__inner">
+      <a href="#home" class="brand">
+        <span class="brand__tag">&lt;<span class="brand__slash"
+            style="color:#FF2DC7 !important; text-shadow:0 0 6px rgba(255,45,199,.85),0 0 16px rgba(255,45,199,.5),0 0 28px rgba(255,45,199,.3);">/</span>&gt;</span>
+        <span class="brand__text">dellyboo</span>
+      </a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="#home" class="nav-link active" data-nav data-i18n="nav.home">Home</a>
+        <a href="#about" class="nav-link" data-nav data-i18n="nav.about">About</a>
+        <a href="#skills" class="nav-link" data-nav data-i18n="nav.skills">Skills</a>
+        <a href="#services" class="nav-link" data-nav data-i18n="nav.services">Services</a>
+        <a href="#hobbies" class="nav-link" data-nav data-i18n="nav.hobbies">Hobbies</a>
+        <a href="#projects" class="nav-link" data-nav data-i18n="nav.projects">Projects</a>
+        <a href="#contact" class="nav-link" data-nav data-i18n="nav.contact">Contact</a>
+      </nav>
+
+      <div class="navbar__right">
+        <div class="lang-switch" id="langSwitch">
+          <button class="lang-switch__btn" id="langBtn" aria-haspopup="true" aria-expanded="false">
+            <span class="lang-flag fi fi-gb" id="langCurrentFlag"></span> <span id="langCurrent">EN</span> <i
+              class="bi bi-chevron-down lang-chevron"></i>
+          </button>
+          <ul class="lang-switch__menu" id="langMenu" role="menu">
+            <li><button data-lang="en" data-flag="gb" role="menuitem"><span class="lang-flag fi fi-gb"></span>
+                English</button></li>
+            <li><button data-lang="fr" data-flag="fr" role="menuitem"><span class="lang-flag fi fi-fr"></span>
+                Français</button></li>
+            <li><button data-lang="ja" data-flag="jp" role="menuitem"><span class="lang-flag fi fi-jp"></span>
+                日本語</button></li>
+            <li><button data-lang="sw" data-flag="tz" role="menuitem"><span class="lang-flag fi fi-tz"></span>
+                Kiswahili</button></li>
+            <li><button data-lang="rn" data-flag="bi" role="menuitem"><span class="lang-flag fi fi-bi"></span>
+                Ikirundi</button></li>
+          </ul>
+        </div>
+
+        <a href="#contact" class="btn btn--sm btn--primary nav-cta">
+          <i class="bi bi-rocket-takeoff"></i> <span data-i18n="nav.hire">Hire me</span>
+        </a>
+
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= HERO ================= -->
+  <section class="hero" id="home">
+    <div class="hero__blobs" aria-hidden="true">
+      <span class="blob blob--1"></span>
+      <span class="blob blob--2"></span>
+      <span class="blob blob--3"></span>
+    </div>
+
+    <div class="hero__inner">
+      <div class="hero__photo-wrap" data-reveal>
+        <div class="hero__ring" aria-hidden="true"></div>
+        <div class="hero__photo-frame">
+          <!-- If assets/avatar.jpg is missing, this falls back to the monogram below -->
+          <img src="assets/avatar.png" alt="Portrait of Mugisha Dear Duvet" class="hero__photo"
+            onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';">
+          <div class="hero__photo-fallback" aria-hidden="true"><span>MD</span></div>
+        </div>
+        <span class="float-badge float-badge--1"><i class="bi bi-filetype-js"></i></span>
+        <span class="float-badge float-badge--2"><i class="bi bi-database"></i></span>
+        <span class="float-badge float-badge--3"><i class="bi bi-phone"></i></span>
+        <span class="float-badge float-badge--4"><i class="bi bi-fire"></i></span>
+      </div>
+
+      <div class="hero__copy">
+        <p class="eyebrow"><span class="eyebrow__dot"></span> <span data-i18n="hero.eyebrow">Available for freelance
+            work · Based in Japan</span></p>
+
+        <h1 class="hero__title">
+          <span data-i18n="hero.greeting">Hi, I'm</span> <span class="grad-text">Mugisha Dear Duvet</span>
+        </h1>
+
+        <p class="hero__role">
+          <span id="roleTyped" class="role-typed"></span><span class="caret" aria-hidden="true">|</span>
+        </p>
+
+        <p class="hero__desc" data-i18n="hero.desc">
+          I build the websites, mobile apps and databases behind them - working
+          closely with you at every step, from your first idea to a finished
+          product you're proud of.
+        </p>
+
+        <div class="hero__actions">
+          <a href="#projects" class="btn btn--primary">
+            <i class="bi bi-collection"></i> <span data-i18n="hero.cta1">View my work</span>
+          </a>
+          <a href="#contact" class="btn btn--ghost">
+            <i class="bi bi-envelope"></i> <span data-i18n="hero.cta2">Start a project</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <a href="#about" class="scroll-cue" aria-label="Scroll to About section">
+      <span>scroll</span>
+      <i class="bi bi-arrow-down"></i>
+    </a>
+  </section>
+
+  <!-- ================= ABOUT ================= -->
+  <section class="section" id="about">
+    <div class="section__inner about">
+      <div class="about__copy" data-reveal>
+        <p class="section__eyebrow" data-i18n="about.eyebrow">// about</p>
+        <h2 class="section__title" data-i18n="about.title">A bit about me</h2>
+        <p class="about__text" data-i18n="about.p1">I'm Mugisha Dear Duvet, a full-stack web developer and database
+          specialist working with clients remotely from Japan.</p>
+        <p class="about__text" data-i18n="about.p2">Alongside web work, I build cross-platform mobile apps with Flutter
+          and Firebase, and take on smaller jobs like web automation, debugging, logo design and AI-assisted content
+          editing.</p>
+      </div>
+
+      <div class="spec-card" data-reveal>
+        <div class="spec-row">
+          <span class="spec-key"><i class="bi bi-balloon"></i> <span data-i18n="about.age_label">Age</span></span>
+          <span class="spec-val" data-i18n="about.age_value">26 years old</span>
+        </div>
+        <div class="spec-row">
+          <span class="spec-key"><i class="bi bi-geo-alt"></i> <span
+              data-i18n="about.location_label">Location</span></span>
+          <span class="spec-val" data-i18n="about.location_value">Japan (Remote · GMT+9)</span>
+        </div>
+        <div class="spec-row">
+          <span class="spec-key"><i class="bi bi-bullseye"></i> <span data-i18n="about.focus_label">Focus</span></span>
+          <span class="spec-val" data-i18n="about.focus_value">Web apps · Mobile apps · Databases</span>
+        </div>
+        <div class="spec-row">
+          <span class="spec-key"><i class="bi bi-stack"></i> <span data-i18n="about.stack_label">Stack</span></span>
+          <span class="spec-val">Next.js · PHP · MySQL · MongoDB · Firebase · Flutter</span>
+        </div>
+        <div class="spec-row">
+          <span class="spec-key"><i class="bi bi-lightning-charge"></i> <span
+              data-i18n="about.availability_label">Availability</span></span>
+          <span class="spec-val status-open"><span class="status-dot"></span> <span
+              data-i18n="about.availability_value">Open for freelance projects</span></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SKILLS ================= -->
+  <section class="section section--alt" id="skills">
+    <div class="section__inner">
+      <p class="section__eyebrow center" data-i18n="skills.eyebrow">// skills</p>
+      <h2 class="section__title center" data-i18n="skills.title">Toolkit</h2>
+      <p class="section__lede center" data-i18n="skills.lede">Grouped by where each tool lives in the stack.</p>
+
+      <div class="panels">
+        <div class="panel" data-reveal>
+          <div class="panel__head">
+            <i class="bi bi-window-stack panel__icon"></i>
+            <h3 data-i18n="skills.frontend">Front‑End</h3>
+          </div>
+          <ul class="panel__list">
+            <li><i class="bi bi-filetype-html"></i> HTML5</li>
+            <li><i class="bi bi-filetype-css"></i> CSS3</li>
+            <li><i class="bi bi-filetype-js"></i> JavaScript</li>
+            <li><i class="bi bi-triangle"></i> Next.js</li>
+          </ul>
+        </div>
+
+        <div class="panel" data-reveal>
+          <div class="panel__head">
+            <i class="bi bi-hdd-network panel__icon"></i>
+            <h3 data-i18n="skills.backend">Back‑End</h3>
+          </div>
+          <ul class="panel__list">
+            <li><i class="bi bi-filetype-php"></i> PHP</li>
+            <li><i class="bi bi-fire"></i> Firebase</li>
+            <li><i class="bi bi-plug"></i> REST APIs</li>
+            <li><i class="bi bi-robot"></i> Web automation</li>
+          </ul>
+        </div>
+
+        <div class="panel" data-reveal>
+          <div class="panel__head">
+            <i class="bi bi-database panel__icon"></i>
+            <h3 data-i18n="skills.database">Database</h3>
+          </div>
+          <ul class="panel__list">
+            <li><i class="bi bi-database-fill"></i> MySQL</li>
+            <li><i class="bi bi-diagram-3"></i> MongoDB</li>
+            <li><i class="bi bi-diagram-2"></i> Schema design</li>
+            <li><i class="bi bi-speedometer2"></i> Query optimization</li>
+          </ul>
+        </div>
+
+        <div class="panel" data-reveal>
+          <div class="panel__head">
+            <i class="bi bi-phone panel__icon"></i>
+            <h3 data-i18n="skills.mobile">Mobile</h3>
+          </div>
+          <ul class="panel__list">
+            <li><i class="bi bi-google"></i> Flutter</li>
+            <li><i class="bi bi-fire"></i> Firebase Auth / RTDB</li>
+            <li><i class="bi bi-apple"></i> Cross‑platform builds</li>
+            <li><i class="bi bi-bug"></i> Debugging</li>
+          </ul>
+        </div>
+
+        <div class="panel" data-reveal>
+          <div class="panel__head">
+            <i class="bi bi-brush panel__icon"></i>
+            <h3 data-i18n="skills.design">Design &amp; Content</h3>
+          </div>
+          <ul class="panel__list">
+            <li><i class="bi bi-vector-pen"></i> Logo design</li>
+            <li><i class="bi bi-magic"></i> AI content editing</li>
+            <li><i class="bi bi-layout-text-window"></i> UI polish</li>
+            <li><i class="bi bi-file-earmark-code"></i> Clean handoff code</li>
+          </ul>
+        </div>
+
+        <div class="panel" data-reveal>
+          <div class="panel__head">
+            <i class="bi bi-tools panel__icon"></i>
+            <h3 data-i18n="skills.workflow">Workflow</h3>
+          </div>
+          <ul class="panel__list">
+            <li><i class="bi bi-git"></i> Git &amp; GitHub</li>
+            <li><i class="bi bi-bug-fill"></i> Software debugging</li>
+            <li><i class="bi bi-chat-dots"></i> Clear communication</li>
+            <li><i class="bi bi-rocket-takeoff"></i> Fast delivery</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SERVICES ================= -->
+  <section class="section" id="services">
+    <div class="section__inner">
+      <p class="section__eyebrow center" data-i18n="services.eyebrow">// services</p>
+      <h2 class="section__title center" data-i18n="services.title">What I can build for you</h2>
+
+      <div class="services-grid">
+        <div class="service-card" data-reveal>
+          <i class="bi bi-code-slash service-card__icon"></i>
+          <h3 data-i18n="services.web.title">Web Development</h3>
+          <p data-i18n="services.web.desc">Responsive websites and web apps with HTML, CSS, JavaScript and Next.js -
+            fast, accessible and easy to maintain.</p>
+        </div>
+        <div class="service-card" data-reveal>
+          <i class="bi bi-phone-vibrate service-card__icon"></i>
+          <h3 data-i18n="services.mobile.title">Mobile Apps</h3>
+          <p data-i18n="services.mobile.desc">Cross-platform mobile apps built with Flutter, backed by Firebase for
+            auth, storage and real-time data.</p>
+        </div>
+        <div class="service-card" data-reveal>
+          <i class="bi bi-database-gear service-card__icon"></i>
+          <h3 data-i18n="services.db.title">Database Design</h3>
+          <p data-i18n="services.db.desc">Clean, normalized MySQL and MongoDB schemas that stay fast and predictable as
+            your data grows.</p>
+        </div>
+        <div class="service-card" data-reveal>
+          <i class="bi bi-robot service-card__icon"></i>
+          <h3 data-i18n="services.automation.title">Web Automation</h3>
+          <p data-i18n="services.automation.desc">Scripts and tools that automate repetitive browser and data-entry
+            tasks so your team doesn't have to.</p>
+        </div>
+        <div class="service-card" data-reveal>
+          <i class="bi bi-bug service-card__icon"></i>
+          <h3 data-i18n="services.debug.title">Debugging &amp; Fixes</h3>
+          <p data-i18n="services.debug.desc">Tracking down and fixing bugs in existing codebases - front end, back end
+            or database layer.</p>
+        </div>
+        <div class="service-card" data-reveal>
+          <i class="bi bi-palette service-card__icon"></i>
+          <h3 data-i18n="services.logo.title">Logo &amp; AI Content Editing</h3>
+          <p data-i18n="services.logo.desc">Simple, memorable logo design plus AI-assisted editing and polishing for
+            written content.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= WHY WORK WITH ME ================= -->
+  <section class="strip">
+    <div class="section__inner strip__inner">
+      <div class="strip__item" data-reveal>
+        <i class="bi bi-rocket-takeoff"></i>
+        <h4 data-i18n="strip.fast.title">Fast delivery</h4>
+        <p data-i18n="strip.fast.desc">Focused scope and steady progress updates - no radio silence.</p>
+      </div>
+      <div class="strip__item" data-reveal>
+        <i class="bi bi-chat-square-text"></i>
+        <h4 data-i18n="strip.comm.title">Reliable communication</h4>
+        <p data-i18n="strip.comm.desc">Clear updates in a timezone-friendly cadence, from kickoff to handover.</p>
+      </div>
+      <div class="strip__item" data-reveal>
+        <i class="bi bi-braces-asterisk"></i>
+        <h4 data-i18n="strip.clean.title">Clean code</h4>
+        <p data-i18n="strip.clean.desc">Organized, documented code that the next developer can actually read.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= HOBBIES ================= -->
+  <!--
+  Hobby cards are loaded live from your Firebase "hobbies" collection
+  (see js/firebase-init.js + README.md). Add documents with fields:
+  title (string), description (string), image (image URL string), order (number).
+  Until Firebase is configured, a few demo cards are shown as a placeholder.
+-->
+  <section class="section section--alt" id="hobbies">
+    <div class="section__inner">
+      <p class="section__eyebrow center" data-i18n="hobbies.eyebrow">// hobbies</p>
+      <h2 class="section__title center" data-i18n="hobbies.title">Beyond the code</h2>
+      <p class="section__lede center" data-i18n="hobbies.lede">A few glimpses of everyday life outside of work.</p>
+
+      <div class="hobbies-grid" id="hobbiesGrid">
+        <div class="hobby-skeleton"></div>
+        <div class="hobby-skeleton"></div>
+        <div class="hobby-skeleton"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Hobby "read more" modal -->
+  <div class="modal" id="hobbyModal" aria-hidden="true">
+    <div class="modal__backdrop" data-close-modal></div>
+    <div class="modal__card">
+      <button class="modal__close" data-close-modal aria-label="Close"><i class="bi bi-x-lg"></i></button>
+      <img id="modalImg" src="" alt="" class="modal__img">
+      <h3 id="modalTitle"></h3>
+      <p id="modalDesc"></p>
+    </div>
+  </div>
+
+  <!-- ================= PROJECTS ================= -->
+  <section class="section" id="projects">
+    <div class="section__inner">
+      <p class="section__eyebrow center" data-i18n="projects.eyebrow">// projects</p>
+      <h2 class="section__title center" data-i18n="projects.title">Selected work</h2>
+      <p class="section__lede center" data-i18n="projects.lede">A few real builds across the stack.</p>
+
+      <div class="projects-grid">
+        <article class="project-card" data-reveal>
+          <div class="project-card__top">
+            <i class="bi bi-shop"></i>
+            <span class="project-card__tag-primary">Web · Full‑Stack</span>
+          </div>
+          <h3>Bar &amp; Restaurant Management System</h3>
+          <p>A management system for bar/restaurant operations - orders, inventory and day-to-day admin in one
+            dashboard.</p>
+          <div class="project-card__tags">
+            <span class="tag">PHP</span><span class="tag">MySQL</span><span class="tag">JavaScript</span>
+          </div>
+          <div class="project-card__links">
+            <a href="https://github.com/Dellyboo/Bar-Resto-Management-System" target="_blank" rel="noopener"
+              class="link-btn"><i class="bi bi-github"></i> <span data-i18n="projects.source">Source</span></a>
+          </div>
+        </article>
+
+        <article class="project-card" data-reveal>
+          <div class="project-card__top">
+            <i class="bi bi-clipboard-check"></i>
+            <span class="project-card__tag-primary">Web · Database</span>
+          </div>
+          <h3>Request Management System</h3>
+          <p>A system for submitting and tracking materials/requests, with a structured database backing status and
+            approvals.</p>
+          <div class="project-card__tags">
+            <span class="tag">PHP</span><span class="tag">MySQL</span>
+          </div>
+          <div class="project-card__links">
+            <a href="https://github.com/Dellyboo/Request-management-system" target="_blank" rel="noopener"
+              class="link-btn"><i class="bi bi-github"></i> <span data-i18n="projects.source">Source</span></a>
+          </div>
+        </article>
+
+        <article class="project-card" data-reveal>
+          <div class="project-card__top">
+            <i class="bi bi-geo"></i>
+            <span class="project-card__tag-primary">Web</span>
+          </div>
+          <h3>Live in Kobe</h3>
+          <p>A single-page site built around life in Kobe, Japan.</p>
+          <div class="project-card__tags">
+            <span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span>
+          </div>
+          <div class="project-card__links">
+            <a href="https://github.com/Dellyboo/live-in-kobe" target="_blank" rel="noopener" class="link-btn"><i
+                class="bi bi-github"></i> <span data-i18n="projects.source">Source</span></a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CONTACT ================= -->
+  <section class="section section--alt" id="contact">
+    <div class="section__inner contact">
+      <div class="contact__copy" data-reveal>
+        <p class="section__eyebrow" data-i18n="contact.eyebrow">// contact</p>
+        <h2 class="section__title" data-i18n="contact.title">Let's build something.</h2>
+        <p class="about__text" data-i18n="contact.desc">
+          Have a project in mind - a website, a mobile app, or a database that needs
+          cleaning up? Send a few details below, or email me directly. I typically
+          reply within a day.
+        </p>
+
+        <div class="contact__direct">
+          <a href="mailto:dellydear98@gmail.com" class="contact-line">
+            <i class="bi bi-envelope-at"></i> dellydear98@gmail.com
+          </a>
+          <span class="contact-line contact-line--muted">
+            <i class="bi bi-geo-alt"></i> Japan · Remote (GMT+9)
+          </span>
+        </div>
+
+        <div class="socials">
+          <a href="https://github.com/Dellyboo" target="_blank" rel="noopener" class="social-icon"
+            aria-label="GitHub"><i class="bi bi-github"></i></a>
+          <!-- REPLACE ME: add your LinkedIn URL when you have one -->
+          <a href="#" class="social-icon" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+          <a href="mailto:dellydear98@gmail.com" class="social-icon" aria-label="Email"><i
+              class="bi bi-envelope"></i></a>
+        </div>
+      </div>
+
+      <!--
+      This form sends email via EmailJS (free, no backend - see
+      js/emailjs-config.js) and optionally logs a backup copy to Firestore
+      if that's configured (js/firebase-init.js). See README.md.
+    -->
+      <form class="contact-form" id="contactForm" data-reveal>
+        <div class="form-row">
+          <label for="name" data-i18n="contact.form.name">Name</label>
+          <input type="text" id="name" name="name" required data-i18n-ph="contact.form.name_ph" placeholder="Your name">
+        </div>
+        <div class="form-row">
+          <label for="email" data-i18n="contact.form.email">Email</label>
+          <input type="email" id="email" name="email" required data-i18n-ph="contact.form.email_ph"
+            placeholder="you@example.com">
+        </div>
+        <div class="form-row">
+          <label for="message" data-i18n="contact.form.message">Project details</label>
+          <textarea id="message" name="message" rows="5" required data-i18n-ph="contact.form.message_ph"
+            placeholder="Tell me a bit about what you need..."></textarea>
+        </div>
+        <button type="submit" class="btn btn--primary btn--full" id="submitBtn">
+          <i class="bi bi-send"></i> <span data-i18n="contact.form.submit">Send message</span>
+        </button>
+        <p class="form-note" id="formNote"></p>
+      </form>
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <div class="section__inner footer__inner">
+      <span>© <span id="year"></span> Mugisha Dear Duvet - <span data-i18n="footer.rights">Full‑Stack &amp; Mobile
+          Developer</span></span>
+      <a href="#home" class="back-to-top"><i class="bi bi-arrow-up-circle"></i> <span data-i18n="footer.top">Back to
+          top</span></a>
+    </div>
+  </footer>
+
+  <!-- ================= BOXA AI CHAT WIDGET ================= -->
+  <!--
+  Floating chat assistant, bottom-right. Talks to visitors about Mugisha's
+  work and how to collaborate. Runs entirely client-side (free, no backend,
+  no billing) - see js/boxa-chat.js + README.md.
+-->
+  <div class="boxa" id="boxa">
+    <button class="boxa__toggle" id="boxaToggle" aria-expanded="false" aria-controls="boxaPanel"
+      aria-label="Open BOXA AI chat">
+      <span class="boxa__toggle-icon boxa__toggle-icon--open"><i class="bi bi-chat-dots-fill"></i></span>
+      <span class="boxa__toggle-icon boxa__toggle-icon--close"><i class="bi bi-x-lg"></i></span>
+      <span class="boxa__ping" aria-hidden="true"></span>
+    </button>
+
+    <div class="boxa__panel" id="boxaPanel" aria-hidden="true">
+      <div class="boxa__header">
+        <div class="boxa__header-id">
+          <span class="boxa__avatar"><i class="bi bi-stars"></i></span>
+          <div>
+            <p class="boxa__name" data-i18n="boxa.name">BOXA AI</p>
+            <p class="boxa__tagline" data-i18n="boxa.tagline">Ask me about Mugisha's work</p>
+          </div>
+        </div>
+        <div class="boxa__header-actions">
+          <div class="lang-switch lang-switch--boxa" id="boxaLangSwitch">
+            <button class="lang-switch__btn" id="boxaLangBtn" aria-haspopup="true" aria-expanded="false"
+              aria-label="Chat language">
+              <span class="lang-flag fi fi-gb" id="boxaLangFlag"></span> <span id="boxaLangCurrent">EN</span> <i
+                class="bi bi-chevron-down lang-chevron"></i>
+            </button>
+            <ul class="lang-switch__menu" id="boxaLangMenu" role="menu">
+              <li><button data-lang="en" data-flag="gb" role="menuitem"><span class="lang-flag fi fi-gb"></span>
+                  English</button></li>
+              <li><button data-lang="fr" data-flag="fr" role="menuitem"><span class="lang-flag fi fi-fr"></span>
+                  Français</button></li>
+              <li><button data-lang="ja" data-flag="jp" role="menuitem"><span class="lang-flag fi fi-jp"></span>
+                  日本語</button></li>
+              <li><button data-lang="sw" data-flag="tz" role="menuitem"><span class="lang-flag fi fi-tz"></span>
+                  Kiswahili</button></li>
+              <li><button data-lang="rn" data-flag="bi" role="menuitem"><span class="lang-flag fi fi-bi"></span>
+                  Ikirundi</button></li>
+            </ul>
+          </div>
+          <button class="boxa__icon-btn" id="boxaSpeakerBtn" aria-pressed="false" aria-label="Toggle voice replies">
+            <i class="bi bi-volume-mute-fill"></i>
+          </button>
+          <button class="boxa__icon-btn" id="boxaCloseBtn" aria-label="Close chat">
+            <i class="bi bi-x-lg"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="boxa__messages" id="boxaMessages" role="log" aria-live="polite"></div>
+
+      <div class="boxa__typing" id="boxaTyping" hidden>
+        <span></span><span></span><span></span>
+      </div>
+
+      <form class="boxa__inputbar" id="boxaForm">
+        <button type="button" class="boxa__mic" id="boxaMicBtn" aria-label="Voice input">
+          <i class="bi bi-mic-fill"></i>
+        </button>
+        <input type="text" id="boxaInput" data-i18n-ph="boxa.placeholder" placeholder="Type a message…"
+          autocomplete="off">
+        <button type="submit" class="boxa__send" id="boxaSendBtn" aria-label="Send">
+          <i class="bi bi-send-fill"></i>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Core UI (nav, language switch, animations) - has no external dependency, always works -->
+  <script type="module" src="js/main.js"></script>
+  <!-- Hobbies grid (Firestore, free) + contact form (EmailJS, free) - degrades gracefully if either can't load -->
+  <script type="module" src="js/firebase-features.js"></script>
+  <!-- BOXA AI chat widget - runs entirely client-side, free, no backend -->
+  <script type="module" src="js/boxa-chat.js"></script>
+</body>
+
+</html>
